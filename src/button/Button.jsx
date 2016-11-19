@@ -1,18 +1,9 @@
-import { PropTypes } from 'react';
+import React from 'react';
+import BaseCmpt from '../base/BaseCmpt';
 
-import BaseCmpt from './base/BaseCmpt';
+require('./Button.scss');
 
 class Button extends BaseCmpt {
-   static propTypes = {
-      children: PropTypes.node,
-      /**
-       * If true, the button will be disabled.
-       */
-      disabled: PropTypes.bool,
-
-      text: PropTypes.string
-   }
-
    render() {
       return (
          <div>
