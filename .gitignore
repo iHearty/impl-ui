@@ -49,3 +49,6 @@ Temporary Items
 # Nodejs
 node_modules/
 dist/
+
+#VSCode
+.vscode/
