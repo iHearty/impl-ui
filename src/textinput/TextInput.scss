@@ -1,0 +1,39 @@
+@import "../css/impl-styles.scss";
+
+.impl-textinput {
+   line-height: 1;
+   box-sizing: border-box;
+
+   &.color-default {
+      border: 1px solid $border-color-default;
+   }
+
+   &.color-primary {
+      border: 1px solid $border-color-primary;
+   }
+
+   &.color-success {
+      border: 1px solid $border-color-success;
+   }
+
+   &.color-warning {
+      border: 1px solid $border-color-warning;
+   }
+
+   &.color-danger {
+      border: 1px solid $border-color-danger;
+   }
+
+   &.size-tiny input[type=text] {
+      position: relative;
+      top: -2px;
+   }
+
+   input[type=text] {
+      padding: 0 5px;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+   }
+}

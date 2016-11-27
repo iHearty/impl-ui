@@ -3,9 +3,9 @@ import React from 'react';
 import BaseCmpt from '../base/BaseCmpt';
 import { Size, Color } from '../base/enums';
 
-require('./Button.scss');
+require('./TextInput.scss');
 
-class Button extends BaseCmpt {
+class TextInput extends BaseCmpt {
    constructor(props) {
       super(props);
 
@@ -13,26 +13,14 @@ class Button extends BaseCmpt {
    }
 
    baseClass() {
-      return this.props.baseClass || 'impl-button-base';
-   }
-
-   mouseenter() {
-      this.setState({'hover': true});
-   }
-
-   mouseleave() {
-      this.setState({'hover': false});
+      return this.props.baseClass || 'impl-textinput-base';
    }
 
    implRender() {
-      let className = ['impl-button'];
+      let className = ['impl-textinput'];
       className.push(this.props.type);
       className.push(`size-${this.props.size || Size.NORMAL}`);
       className.push(`color-${this.props.color || Color.PRIMARY}`);
-
-      if(this.props.textable) {
-         className.push('textable');
-      }
 
       if(!this.props.disabled && this.state.hover) {
          className.push((this.props.type ? this.props.type + '-' : '') + 'hover');
@@ -45,13 +33,11 @@ class Button extends BaseCmpt {
       }
 
       return (
-         <div className={className.join(' ')} style={style} onMouseEnter={this.mouseenter.bind(this)} onMouseLeave={this.mouseleave.bind(this)}>
-            <button disabled={this.props.disabled}>
-               {this.props.text || this.props.children}
-            </button>
+         <div className={className.join(' ')} style={style}>
+            <input type="text" defaultValue={this.props.value} />
          </div>
       );
    }
 }
 
-export default Button;
+export default TextInput;

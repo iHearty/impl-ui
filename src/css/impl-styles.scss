@@ -1,6 +1,6 @@
-$primary-color: #2c81ba;
+$default-color: #34495e;
 
-$secondary-color: #34495e;
+$primary-color: #2c81ba;
 
 $success-color: #2ecc71;
 
@@ -10,4 +10,104 @@ $warning-color: #f39c12;
 
 $primary-text-color: #263238;
 
+$disabled-color: #bdc3c7;
+
+$border-color-default: $default-color;
+
+$border-color-primary: $primary-color;
+
+$border-color-success: $success-color;
+
+$border-color-danger: $danger-color;
+
+$border-color-warning: $warning-color;
+
+$size-large-height: 36px;
+
+$size-large-font-size: 16px;
+
 $size-normal-height: 30px;
+
+$size-normal-font-size: 14px;
+
+$size-small-height: 24px;
+
+$size-small-font-size: 12px;
+
+$size-tiny-height: 18px;
+
+$size-tiny-font-size: 10px;
+
+.size-large {
+   height: $size-large-height;
+
+   button, input {
+      font-size: $size-large-font-size;
+   }
+}
+
+.size-normal {
+   min-width: 60px;
+   height: $size-normal-height;
+
+   button, input {
+      font-size: $size-normal-font-size;
+   }
+}
+
+.size-small {
+   height: $size-small-height;
+
+   button, input {
+      font-size: $size-small-font-size;
+   }
+}
+
+.size-tiny {
+   height: $size-tiny-height;
+
+   button, input {
+      font-size: $size-tiny-font-size;
+   }
+}
+
+
+.color-default {
+   color: $default-color;
+
+   button, input {
+      color: $default-color;
+   }
+}
+
+.color-primary {
+   color: $primary-color;
+
+   button, input {
+      color: $primary-color;
+   }
+}
+
+.color-success {
+   color: $success-color;
+
+   button, input {
+      color: $success-color;
+   }
+}
+
+.color-danger {
+   color: $danger-color;
+
+   button, input {
+      color: $danger-color;
+   }
+}
+
+.color-warning {
+   color: $warning-color;
+
+   button, input {
+      color: $warning-color;
+   }
+}
